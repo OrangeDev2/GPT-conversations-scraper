@@ -1,0 +1,26 @@
+{
+  "name": "shared_conversation_scraper",
+  "version": "1.0.0",
+  "description": "Extract Dialogues from ChatGPT, Bing AI, and Poe - AI Chat",
+  "main": "api_code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api_code.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrangeDev2/shared_conversation_scraper.git"
+  },
+  "author": "OrangeDev2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OrangeDev2/shared_conversation_scraper/issues"
+  },
+  "homepage": "https://github.com/OrangeDev2/shared_conversation_scraper#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
