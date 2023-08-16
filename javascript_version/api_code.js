@@ -16,7 +16,7 @@ const headers = { // https://developer.mozilla.org/en-US/docs/Glossary/Request_h
 };
 
 app.get('/', (req, res) => {
-  const url = 'https://poe.com/s/jdNuVhC7SrEWJgJrHbZg'; // Put your Chat Share Link.  ChatGPT, Poe AI Chat, or Bing AI
+  const url = 'https://chat.openai.com/share/[id]'; // Put your Chat Share Link.  ChatGPT, Poe AI Chat, or Bing AI Chat.  Bing AI Chat Share feature is available on Microsoft Edge Browser or in Edge App.
 
   axios.get(url, {headers}) // gpt_url default.
     .then(response => response.data)
