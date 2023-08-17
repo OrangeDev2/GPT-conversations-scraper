@@ -7,4 +7,4 @@
 4. Make sure to replace `https://chat.openai.com/share/[id]` in `scrape.js - line 19` with any share link you want to scrape.
 5. `npm start` - Your server will be hosted at http://localhost:3000/
 6. `Ctrl+C` + `y` + `Enter` to shut down server
-7 . Repeat Step 4.
+7. Repeat Step 4
