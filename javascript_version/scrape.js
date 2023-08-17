@@ -16,9 +16,9 @@ const headers = { // https://developer.mozilla.org/en-US/docs/Glossary/Request_h
 };
 
 app.get('/', (req, res) => {
-  const url = 'https://chat.openai.com/share/262cdbcf-f79a-48cc-9f74-16251a8bbf59'; // Put your Chat Share Link. [Note]: Bing AI Chat Share feature is available on Microsoft Edge Browser or Edge App.
+  const url = 'https://chat.openai.com/share/[id]'; // Put your Share Link. [Note]: Bing AI Chat Share feature is available on Microsoft Edge Browser or Edge App.
 
-  axios.get(url, {headers}) // gpt_url default.
+  axios.get(url, {headers})
     .then(response => response.data)
     .then(html => {
       const $ = cheerio.load(html);
@@ -53,6 +53,7 @@ app.get('/', (req, res) => {
                 }
             
 
+            console.log('ChatGPT - Shared Link: ', url)
             console.log(json);
             res.status(200).json(json);
 
@@ -66,7 +67,7 @@ app.get('/', (req, res) => {
                 axios.get(shareIdUrl)
                     .then(secondResponse => secondResponse.data)
                     .then(bingJson => {
-                        let dialogues = [
+                        const dialogues = [
                           bingJson.messages.map((message, index) => ({
                             "from": index  % 2 === 0 ? "human" : "assistant", // Change sender to assistant
                             "value": message.text
@@ -79,6 +80,7 @@ app.get('/', (req, res) => {
                           title: bingJson.messages[0].text
                         };
             
+                        console.log('Bing AI Chat - Shared Link: ', url)
                         console.log(json);
                         res.status(200).json(json);
 
@@ -105,6 +107,7 @@ app.get('/', (req, res) => {
               title: poe_html.props.pageProps.data.chatShare.messages[0].text
             };
 
+            console.log('Poe - Shared Link: ', url)
             console.log(json);
             res.status(200).json(json);
 
