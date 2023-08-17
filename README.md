@@ -1,5 +1,5 @@
 ![New Project (1)](https://github.com/OrangeDev2/ScrapeSharedConvoAPI/assets/47803678/e4b66fca-12ab-4144-835a-5783dc13fd16)
-# Shared Conversation Scraper API
+# Shared Conversation Web Scraper API
 Shared Conversation Scraper API: Extract Dialogues from ChatGPT, Bing AI, and Poe - AI Chat
 
 **Clone the Repository**: Clone or download this repository.
