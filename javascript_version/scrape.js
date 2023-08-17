@@ -16,7 +16,7 @@ const headers = { // https://developer.mozilla.org/en-US/docs/Glossary/Request_h
 };
 
 app.get('/', (req, res) => {
-  const url = 'https://chat.openai.com/share/[id]'; // Put your Chat Share Link.  ChatGPT, Poe AI Chat, or Bing AI Chat.  [Note]: Bing AI Chat Share feature is available on Microsoft Edge Browser or Edge App.
+  const url = 'https://chat.openai.com/share/262cdbcf-f79a-48cc-9f74-16251a8bbf59'; // Put your Chat Share Link. [Note]: Bing AI Chat Share feature is available on Microsoft Edge Browser or Edge App.
 
   axios.get(url, {headers}) // gpt_url default.
     .then(response => response.data)
@@ -34,15 +34,16 @@ app.get('/', (req, res) => {
       if (gpt_html) { // ChatGPT
             gpt_json = JSON.parse(gpt_html).props.pageProps.serverResponse;
 
-            let modelSlug = gpt_json.data.model.slug;
-            let title = gpt_json.data.title;
+            const modelSlug = gpt_json.data.model.slug;
+            const title = gpt_json.data.title;
 
-            let dialogues = [
-                gpt_json.data.linear_conversation.map((message, index) => ({
-                  "from": index  % 2 === 0 ? "human" : "assistant",
-                  "value": message.message?.content.parts[0]
-                }))
-              ];
+            const dialogues = [
+              gpt_json.data.linear_conversation.map((message, index) => ({
+                "from": (index !== 0 && index !== 1 && index % 2 === 0) ? "human" : (index !== 0 && index !== 1 && index % 2 !== 0) ? "assistant" : null,
+                "value": (index !== 0 && index !== 1) ? message.message?.content.parts[0] : null
+              })).filter(message => message.from !== null && message.value !== null)
+            ];
+            
 
             const json = 
                 {
@@ -90,7 +91,7 @@ app.get('/', (req, res) => {
                     res.status(404).send('Resource not found');
                   }
         } else if (poe_html) { // POE AI CHat
-            let dialogues = [
+            const dialogues = [
               poe_html.props.pageProps.data.chatShare.messages.map((message, index) => ({
                 "from": index  % 2 === 0 ? "human" : "assistant",
                 "value": message.text
