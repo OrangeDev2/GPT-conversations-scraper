@@ -10,8 +10,8 @@ Shared Conversation Scraper API: Extract Dialogues from ChatGPT, Bing AI, and Po
 3. `npm install` - to install the required dependencies: (node_modules folder and package-lock.json)
 4. Make sure to replace `https://chat.openai.com/share/[id]` in `scrape.js - line 19` with any share link you want to scrape.
 5. `npm start` - Your server will be hosted at http://localhost:3000/
-6. `Ctrl+C` + `y` + `Enter` to shut down server
-7 . Repeat Step 4.
+6. `Ctrl+C` + `y` + `Enter` to shut down server.
+7. Repeat Step 4
 
 # Python Version
 1. Install Python: Make sure you have Python installed. You can download it from python.org.
