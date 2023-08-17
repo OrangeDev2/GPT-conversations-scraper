@@ -1,12 +1,12 @@
 ![New Project (1)](https://github.com/OrangeDev2/ScrapeSharedConvoAPI/assets/47803678/e4b66fca-12ab-4144-835a-5783dc13fd16)
 # Shared Conversation Web Scraper API - Available in Python and JavaScript
-**Shared Conversation Scraper API: Extract Dialogues from ChatGPT, Bing AI, and Poe - AI Chat. Converted to JSON.**
+**Shared Conversation Scraper API: Extracting Dialogues from ChatGPT, Bing, and Poe and Converting Them to JSON Format. Available in Python and JavaScript.**
 
-# ChatGPT 3.5 Dialogues as JSON.  GPT 4 will work.
+# ChatGPT 3.5 Dialogues in JSON Format. GPT-4 will also be compatible.
 ![image](https://github.com/OrangeDev2/ScrapeSharedConvoAPI/assets/47803678/3708f241-3a99-4737-a0be-aab5561262e9)
-# Poe (Google-PaLM) Dialogues as JSON
+# Poe (Google-PaLM) Dialogues in JSON Format.
 ![image](https://github.com/OrangeDev2/ScrapeSharedConvoAPI/assets/47803678/522dd1c2-504f-4230-b9d5-a5372c7df1ca)
-# Bing AI Chat - Dialogues as JSON
+# Bing AI Chat - Dialogues in JSON Format.
 ![image](https://github.com/OrangeDev2/ScrapeSharedConvoAPI/assets/47803678/4a2be4dd-e9ac-45e0-a15b-2b402cf957fe)
 
 # **Clone the Repository**: Clone or download this repository.
